@@ -1,5 +1,3 @@
-# Vocab Builder
-
 
 # Vocab App
 Allows people to increase their vocabulary knowledge by playing a simple game to predict a word with a following letter.
