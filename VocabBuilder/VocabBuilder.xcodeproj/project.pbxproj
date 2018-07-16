@@ -51,10 +51,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8D9CEC1E20FD1DFB00BD4D86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8D9CEC1F20FD1E0600BD4D86 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8D9CEC2020FD1E1700BD4D86 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BB4C49A620FD1AFB004524A4 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		8D9CEC2120FD1E3C00BD4D86 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BB4C499920FD1AF9004524A4 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BB4C498B20FD1AF9004524A4 = {
 			isa = PBXGroup;
 			children = (
-				BB63BB9220FD1BE300C3D363 /* Views */,
+				8D9CEC2120FD1E3C00BD4D86 /* Controllers */,
+				8D9CEC2020FD1E1700BD4D86 /* Supporting */,
+				8D9CEC1F20FD1E0600BD4D86 /* Helpers */,
+				8D9CEC1E20FD1DFB00BD4D86 /* Views */,
+				BB63BB9220FD1BE300C3D363 /* Storyboards */,
+				BB4C49A120FD1AFB004524A4 /* Assets.xcassets */,
 				BB4C499620FD1AF9004524A4 /* VocabBuilder */,
 				BB4C499520FD1AF9004524A4 /* Products */,
 				0019D603D54A76845252D1DE /* Pods */,
@@ -74,21 +109,18 @@
 			isa = PBXGroup;
 			children = (
 				BB4C499720FD1AF9004524A4 /* AppDelegate.swift */,
-				BB4C499920FD1AF9004524A4 /* ViewController.swift */,
-				BB4C49A120FD1AFB004524A4 /* Assets.xcassets */,
-				BB4C49A620FD1AFB004524A4 /* Info.plist */,
 				BB4C499E20FD1AF9004524A4 /* VocabBuilder.xcdatamodeld */,
 			);
 			path = VocabBuilder;
 			sourceTree = "<group>";
 		};
-		BB63BB9220FD1BE300C3D363 /* Views */ = {
+		BB63BB9220FD1BE300C3D363 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				BB4C499B20FD1AF9004524A4 /* Main.storyboard */,
 				BB4C49A320FD1AFB004524A4 /* LaunchScreen.storyboard */,
 			);
-			path = Views;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		EA9E16F915E6FAE7FA099DA1 /* Frameworks */ = {
@@ -341,7 +373,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = VocabBuilder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = VocabBuilder/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
