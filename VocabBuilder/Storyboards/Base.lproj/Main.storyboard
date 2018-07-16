@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="183" y="-309"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="Hvk-P5-BLU">
             <objects>
-                <viewController id="53x-fJ-QcM" sceneMemberID="viewController">
+                <viewController id="53x-fJ-QcM" customClass="GameViewController" customModule="VocabBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="63g-Lm-qzJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
