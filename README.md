@@ -33,9 +33,9 @@ Users will open the app and will start the game by getting a random letter and u
 * `API for words`
 * `Score Calculator`
 
-# Weekly Milestone
+# Weekly Milestone/Tasks
 
-### **Tasks for Monday:**
+### **Monday:**
 * API Helper file with connect the API.
 * Struct for each word using the data model from “Model”
 * Dictionary of arrays for letters
@@ -46,7 +46,7 @@ Users will open the app and will start the game by getting a random letter and u
 * Take input from user and add it to a temporary array
 * Function that checks if user already inputted that word
 * Create Timer and be able to switch to end screen
- 
+
 **Tuesday:**
 * Playable App.
 * Timer works.
@@ -61,4 +61,18 @@ Users will open the app and will start the game by getting a random letter and u
 **Friday:**
 
 
+### **Achieved Tasks:** 
 
+**Tuesday:**
+* Dictionary of Arrays for letters.
+* Logic for checking previously used words and refactored the code.
+* Added timer to the Home View and Game View Controller
+* Able to communicate with the oxford dictionary API
+*  
+
+**Wednesday:**
+
+**Thursday:**
+
+**Friday:**
+ 
