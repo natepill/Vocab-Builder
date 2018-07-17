@@ -41,7 +41,6 @@ struct API {
                 print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
             }
         }).resume()
-        
     }
     
 }
