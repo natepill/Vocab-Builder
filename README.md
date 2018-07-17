@@ -75,4 +75,13 @@ Users will open the app and will start the game by getting a random letter and u
 **Thursday:**
 
 **Friday:**
- 
+
+# Files collaborators working on 
+
+## Tushar: Result View Controller/Storyboard
+
+## Nathan: View Controller and API Service
+
+## Memo: Game View Controller
+
+## Owais: Score Calculator 
