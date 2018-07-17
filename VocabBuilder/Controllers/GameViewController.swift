@@ -10,10 +10,10 @@ import UIKit
 
 class GameViewController: UIViewController, UITextFieldDelegate {
     
+    // Variables for timer and array of words used
+    
     var wordsUsed: [String] = []
     var words: String = "Words Used: " // Delete this later
-    
-    // Variable for Timer
     var gameInt = 11
     var gameTimer = Timer()
     

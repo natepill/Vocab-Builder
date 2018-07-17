@@ -15,6 +15,7 @@
 		BB4C49A020FD1AF9004524A4 /* VocabBuilder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB4C499E20FD1AF9004524A4 /* VocabBuilder.xcdatamodeld */; };
 		BB4C49A220FD1AFB004524A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4C49A120FD1AFB004524A4 /* Assets.xcassets */; };
 		BB4C49A520FD1AFB004524A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4C49A320FD1AFB004524A4 /* LaunchScreen.storyboard */; };
+		BB5E6B8920FEA85500CD526E /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5E6B8820FEA85500CD526E /* Result.storyboard */; };
 		BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A70E20FE5127006F5295 /* GameLogic.swift */; };
 		BBA0A71220FE6561006F5295 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A71120FE6561006F5295 /* APIService.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		BB4C49A120FD1AFB004524A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB4C49A420FD1AFB004524A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB4C49A620FD1AFB004524A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB5E6B8820FEA85500CD526E /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		BBA0A70E20FE5127006F5295 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameLogic.swift; path = Controllers/GameLogic.swift; sourceTree = SOURCE_ROOT; };
 		BBA0A71120FE6561006F5295 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E6C59007741A4FC2C535954C /* Pods-VocabBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		BB63BB9220FD1BE300C3D363 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				BB5E6B8820FEA85500CD526E /* Result.storyboard */,
 				BB4C499B20FD1AF9004524A4 /* Main.storyboard */,
 				BB4C49A320FD1AFB004524A4 /* LaunchScreen.storyboard */,
 			);
@@ -210,6 +213,7 @@
 				BB4C49A520FD1AFB004524A4 /* LaunchScreen.storyboard in Resources */,
 				BB4C49A220FD1AFB004524A4 /* Assets.xcassets in Resources */,
 				BB4C499D20FD1AF9004524A4 /* Main.storyboard in Resources */,
+				BB5E6B8920FEA85500CD526E /* Result.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
