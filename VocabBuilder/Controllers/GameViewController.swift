@@ -12,8 +12,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     var wordsUsed: [String] = []
     var words: String = "Words Used: " // Delete this later
+    
+    // Variable for Timer
     var gameInt = 11
     var gameTimer = Timer()
+    
     @IBOutlet weak var resultLabel: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var letterLabel: UILabel!
@@ -37,16 +40,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     // Function that deals with pressing "Return" on keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         // Get word from text field input
         let wordGiven = wordInputTextField.text!.lowercased()
         print(wordsUsed)
-        
         handleWordsUsedBefore(with: errorLabel, and: wordGiven, andReset: wordInputTextField)
-        
-
         return false // Prevents keyboard from hiding
-        
     }
 
 

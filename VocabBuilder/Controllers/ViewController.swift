@@ -13,17 +13,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    // Variables for Timer
     var startInt = 3
     @objc var startTimer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        API.checkIfWordExists(word: "deez nuutaz")
+        // API.checkIfWordExists(word: "deez nuutaz")
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
-    
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         // Set the start time variable
@@ -32,11 +30,8 @@ class ViewController: UIViewController {
         startButton.setTitle(String(startInt), for: .normal)
         // Equating the startTimer variable to Create a timer and schedules it on the current run loop in the default
         startTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.startGameTimer), userInfo: nil, repeats: true)
-        
     }
     
-    
-
 }
 
 extension ViewController{
