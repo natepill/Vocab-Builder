@@ -33,27 +33,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         // Get word from text field input
         let wordGiven = wordInputTextField.text!.lowercased()
-        
         print(wordsUsed)
         
-        // Check if word already used
-        if wordsUsed.contains(wordGiven) {
-            // Display error
-            errorLabel.text = "\(wordGiven) already used"
-            errorLabel.isHidden = false
-        } else {
-            // Hide error and append to array of used words
-            wordsUsed.append(wordGiven)
-            errorLabel.isHidden = true
-            
-            // Delete this later
-            words += "\(wordGiven), "
-            testLabel.text = String(words)
-            
-        }
+        handleWordsUsedBefore(with: errorLabel, and: wordGiven, andReset: wordInputTextField)
         
-        // Reset input
-        wordInputTextField.text = ""
+
         return false // Prevents keyboard from hiding
         
     }
