@@ -37,7 +37,8 @@ struct API {
                 print("Word \(word) exists!")
             } else {
                 print("Word \(word) does not exist!")
-                print(NSString.init(data: data!, encoding: String.Encoding.utf8.rawValue))
+                guard let data = data else{return}
+                print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
             }
         }).resume()
         
