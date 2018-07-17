@@ -10,7 +10,10 @@ import Foundation
 
 struct arrayGenerator {
     
-    var alphabetArray: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    var alphabetArray: [String] = ["A", "B", "C", "D", "E", "F", "G",
+                                   "H", "I", "J", "K", "L", "M", "N",
+                                   "O", "P", "Q", "R", "S", "T", "U",
+                                   "V", "W", "X", "Y", "Z"]
     
     func generateRandomArray(alphabetArray: [String]) -> [String] {
         var randomArray = [String]()
