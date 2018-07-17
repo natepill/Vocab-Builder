@@ -27,7 +27,7 @@
                                     <color key="titleColor" red="0.96383383020000002" green="0.97774865619999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="53x-fJ-QcM" kind="show" id="Of0-U7-83P"/>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RnI-Fk-r7G"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vocab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwL-Zt-7bl">
@@ -52,6 +52,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="eAG-4J-tYm" id="2I1-Ec-cUo"/>
+                        <segue destination="53x-fJ-QcM" kind="show" identifier="startGameSegue" id="P9a-ee-7Gz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +85,7 @@
                                 <rect key="frame" x="24" y="262.5" width="327" height="30"/>
                                 <state key="normal" title="View Results "/>
                                 <connections>
-                                    <segue destination="jqU-3W-Ga1" kind="show" id="qS6-cC-AXf"/>
+                                    <action selector="resultButtonTapped:" destination="53x-fJ-QcM" eventType="touchUpInside" id="7aJ-Zr-wAX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekf-zI-ufv">
@@ -96,6 +100,13 @@
                                 <rect key="frame" x="16" y="174" width="343" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.85500001910000001" green="0.30557339579999998" blue="0.20624835580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eow-o1-2Jb">
+                                <rect key="frame" x="165" y="44" width="45" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="45"/>
+                                <color key="textColor" red="0.93456535532994922" green="0.10789223057258403" blue="0.002653678911601484" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -122,8 +133,11 @@
                     <connections>
                         <outlet property="errorLabel" destination="8rp-W0-8xG" id="Ozs-z7-Nzd"/>
                         <outlet property="letterLabel" destination="GgT-oT-Lqr" id="xec-AB-Hyx"/>
+                        <outlet property="resultLabel" destination="dh8-3l-rQP" id="gUv-Hb-kk9"/>
                         <outlet property="testLabel" destination="ekf-zI-ufv" id="89R-xs-I3b"/>
+                        <outlet property="timeLabel" destination="Eow-o1-2Jb" id="71G-u1-HBj"/>
                         <outlet property="wordInputTextField" destination="9TO-hQ-H4n" id="N6p-uv-HgT"/>
+                        <segue destination="jqU-3W-Ga1" kind="show" identifier="resultScreenSegue" id="VsA-Xn-G3w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUX-sg-J7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
