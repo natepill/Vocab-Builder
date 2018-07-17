@@ -50,23 +50,16 @@ Users will open the app and will start the game by getting a random letter and u
 
 
 
-### **Tasks for today:**
-**Nathan:** 
+### **Tasks for Monday:**
 * API Helper file with connect the API.
 * Struct for each word using the data model from “Model”
 * Dictionary of arrays for letters
 * Check a word to see if it exists in the <Letter> Dictionary based on the retrieved index values from Owais’ randomly generated array of letters
-
-**Owais:** 
 * Array of all the letters
 * Generate random array of 26 Letters
 * An algorithm to calculate the score 
-
-**Memo:**
 * Take input from user and add it to a temporary array
 * Function that checks if user already inputted that word
-
-**Tushar:**
 * Create Timer and be able to switch to end screen
 
 
