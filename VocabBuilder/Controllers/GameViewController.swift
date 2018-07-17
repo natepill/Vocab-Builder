@@ -49,6 +49,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             // Delete this later
             words += "\(wordGiven), "
             testLabel.text = String(words)
+            
         }
         
         // Reset input
