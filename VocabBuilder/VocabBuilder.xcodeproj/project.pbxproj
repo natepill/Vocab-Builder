@@ -16,6 +16,7 @@
 		BB4C49A220FD1AFB004524A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4C49A120FD1AFB004524A4 /* Assets.xcassets */; };
 		BB4C49A520FD1AFB004524A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4C49A320FD1AFB004524A4 /* LaunchScreen.storyboard */; };
 		BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A70E20FE5127006F5295 /* GameLogic.swift */; };
+		BBA0A71220FE6561006F5295 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A71120FE6561006F5295 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BB4C49A420FD1AFB004524A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB4C49A620FD1AFB004524A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBA0A70E20FE5127006F5295 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameLogic.swift; path = Controllers/GameLogic.swift; sourceTree = SOURCE_ROOT; };
+		BBA0A71120FE6561006F5295 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E6C59007741A4FC2C535954C /* Pods-VocabBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder.release.xcconfig"; sourceTree = "<group>"; };
 		FEA88CEE0E60580D19DB0595 /* Pods-VocabBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		BB4C498B20FD1AF9004524A4 = {
 			isa = PBXGroup;
 			children = (
+				BBA0A71020FE653E006F5295 /* Services */,
 				8D9CEC2120FD1E3C00BD4D86 /* Controllers */,
 				8D9CEC2020FD1E1700BD4D86 /* Supporting */,
 				8D9CEC1F20FD1E0600BD4D86 /* Helpers */,
@@ -127,6 +130,14 @@
 				BB4C49A320FD1AFB004524A4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BBA0A71020FE653E006F5295 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BBA0A71120FE6561006F5295 /* APIService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		EA9E16F915E6FAE7FA099DA1 /* Frameworks */ = {
@@ -234,6 +245,7 @@
 				BB4C499A20FD1AF9004524A4 /* ViewController.swift in Sources */,
 				BB4C49A020FD1AF9004524A4 /* VocabBuilder.xcdatamodeld in Sources */,
 				BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */,
+				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
