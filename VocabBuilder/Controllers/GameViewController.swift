@@ -14,7 +14,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var words: String = "Words Used: " // Delete this later
     
     // Variable for Timer
-    var gameInt = 11
+    var gameInt = 10
     var gameTimer = Timer()
     
     @IBOutlet weak var resultLabel: UIButton!
