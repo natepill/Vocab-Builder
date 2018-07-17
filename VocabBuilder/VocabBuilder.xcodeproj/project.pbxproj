@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03434D5220FEA7B700F93FA9 /* ArrayGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434D5120FEA7B700F93FA9 /* ArrayGenerator.swift */; };
 		22CCA204B32B53526D40F0E7 /* Pods_VocabBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6976E9A09FC47EEC1E0A9F5B /* Pods_VocabBuilder.framework */; };
 		BB2875C620FD5015003A8042 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2875C520FD5015003A8042 /* GameViewController.swift */; };
 		BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C499720FD1AF9004524A4 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03434D5120FEA7B700F93FA9 /* ArrayGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrayGenerator.swift; path = Controllers/ArrayGenerator.swift; sourceTree = SOURCE_ROOT; };
 		6976E9A09FC47EEC1E0A9F5B /* Pods_VocabBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2875C520FD5015003A8042 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BB4C499420FD1AF9004524A4 /* VocabBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				BBA0A70E20FE5127006F5295 /* GameLogic.swift */,
+				03434D5120FEA7B700F93FA9 /* ArrayGenerator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */,
 				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
+				03434D5220FEA7B700F93FA9 /* ArrayGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
