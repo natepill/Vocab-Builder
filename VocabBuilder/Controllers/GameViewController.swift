@@ -15,7 +15,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var randomLetter: String = LetterGenerator.generate()
     var wordsUsed: [String] = []
     var words: String = "Words Used: " // Delete this later
-    var gameInt = 11
+    var gameInt = 110
     var gameTimer = Timer()
     
     @IBOutlet weak var resultLabel: UIButton!
@@ -29,6 +29,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
@@ -40,13 +41,23 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         // Show keyboard when view loads
         wordInputTextField.becomeFirstResponder()
         
+
+        
+    }
+    
+    //Disables the space bar
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (string == " ") {
+            return false
+        }
+        return true
     }
     
     // Function that with "Return" button when pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Get word from text field input
-        let wordGiven = wordInputTextField.text!.uppercased()
-        print(wordsUsed)
+        var wordGiven = wordInputTextField.text!.uppercased()
+//        print(wordsUsed)
         
         handleWordInput(wordGiven: wordGiven)
         
@@ -63,19 +74,27 @@ class GameViewController: UIViewController, UITextFieldDelegate {
 // Game logic
 extension GameViewController {
     
+
+    
+    
+    
     func handleWordInput(wordGiven: String) {
         
-        // NATHAN:
-        // Check that word exists
-        // if word does not exist {
-        //        let errorText: String = "Must begin with " + randomLetter
-        //        show(errorText: errorText)
-        //
-        // }
-        
-        
-        
-        
+
+
+       // API.checkIfWordExists(word: wordGiven)
+        print(API.wordExists)
+
+        API.checkIfWordExists(word: wordGiven) { (exit) in
+            
+            DispatchQueue.main.async {
+                if API.wordExists == false{
+                    let wordDoesNotExist: String = "Word does not Exist!"
+                    self.show(errorText: wordDoesNotExist)
+                }
+            }
+        }
+
         //word already used
         if wordsUsed.contains(wordGiven)  {
             let errorText: String = "Already used " + wordGiven
