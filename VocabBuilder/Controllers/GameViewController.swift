@@ -35,6 +35,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
         letterLabel.text = randomLetter
+        wordInputTextField.autocorrectionType = .no
         
         // Start timer for game screen
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.game), userInfo: nil, repeats: true)
@@ -42,6 +43,14 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         // Show keyboard when view loads
         wordInputTextField.becomeFirstResponder()
         
+    }
+    
+    //Disables the space bar
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (string == " ") {
+            return false
+        }
+        return true
     }
     
     // Function that with "Return" button when pressed
@@ -78,7 +87,7 @@ extension GameViewController {
             DispatchQueue.main.async {
                 if API.wordExists == false{
                     // reset view here
-                    let wordDoesNotExist: String = "Word does not Exist!"
+                    let wordDoesNotExist: String = "\(wordGiven) does not Exist!"
                     self.show(errorText: wordDoesNotExist)
                 }
                     
