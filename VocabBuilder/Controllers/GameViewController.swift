@@ -12,6 +12,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     // Variables for timer and array of words used
     
+    var randomLetter: String = LetterGenerator.generate()
     var wordsUsed: [String] = []
     var words: String = "Words Used: " // Delete this later
     var gameInt = 11
@@ -31,22 +32,25 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
-        // Starting the timer for the main game screen
+        letterLabel.text = randomLetter
+        
+        // Start timer for game screen
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.game), userInfo: nil, repeats: true)
-        // Popping up the keyboard as soon the GameViewController loads
+        
+        // Show keyboard when view loads
         wordInputTextField.becomeFirstResponder()
         
     }
     
-    // Function that deals with pressing "Return" on keyboard
+    // Function that with "Return" button when pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Get word from text field input
-        let wordGiven = wordInputTextField.text!.lowercased()
+        let wordGiven = wordInputTextField.text!.uppercased()
         print(wordsUsed)
-        handleWordsUsedBefore(with: errorLabel, and: wordGiven, andReset: wordInputTextField)
+        
+        handleWordInput(wordGiven: wordGiven)
         return false // Prevents keyboard from hiding
     }
-
 
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         segueToResultViewController()
@@ -73,6 +77,50 @@ extension GameViewController{
         // Perform a segue to the next view controller
         self.performSegue(withIdentifier: "resultScreenSegue", sender: self)
     }
+}
+
+extension GameViewController {
+    
+    func handleWordInput(wordGiven: String) {
+        
+        //word already used
+        if wordsUsed.contains(wordGiven)  {
+            let errorText: String = "Already used " + wordGiven
+            show(errorText: errorText)
+            
+            //word does not contain the randomLetter
+        } else if wordGiven.hasPrefix(randomLetter) == false {
+            let errorText: String = "Must begin with " + randomLetter
+            show(errorText: errorText)
+            
+            //word sastifies the requirement
+        } else {
+            wordsUsed.append(wordGiven)
+            hideError()
+            newRandomLetter()
+        }
+        resetTextField()
+    }
+    
+    func show(errorText: String) {
+        errorLabel.text = errorText
+        errorLabel.isHidden = false
+    }
+    
+    func hideError() {
+        errorLabel.isHidden = true
+    }
+    
+    func resetTextField() {
+        wordInputTextField.text = ""
+    }
+    
+    func newRandomLetter() {
+        randomLetter = LetterGenerator.generate()
+        letterLabel.text = randomLetter
+    }
+    
+    
 }
 
 
