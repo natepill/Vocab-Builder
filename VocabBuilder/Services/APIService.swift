@@ -29,7 +29,7 @@ struct API {
         
         let session = URLSession.shared
         _ = session.dataTask(with: request, completionHandler: { data, response, error in
-          
+            
             guard let response = response as? HTTPURLResponse else {return}
             print(response.statusCode)
             switch response.statusCode {
@@ -43,10 +43,10 @@ struct API {
             
             completion(wordExists)
             
-          
-              if  let data = data,
+            
+            if  let data = data,
                 let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
-               
+                
                 print(response)
                 print("JSON DATA", jsonData)
                 print("Word \(word) exists!")
@@ -61,11 +61,3 @@ struct API {
     }
     
 }
-
-
-
-
-    
-
-
-

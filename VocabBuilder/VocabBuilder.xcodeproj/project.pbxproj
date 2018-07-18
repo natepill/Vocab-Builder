@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03434D5220FEA7B700F93FA9 /* LetterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434D5120FEA7B700F93FA9 /* LetterGenerator.swift */; };
+		03C10E0120FFE53A00B411C3 /* CalculateScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C10E0020FFE53A00B411C3 /* CalculateScore.swift */; };
 		22CCA204B32B53526D40F0E7 /* Pods_VocabBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6976E9A09FC47EEC1E0A9F5B /* Pods_VocabBuilder.framework */; };
 		8D10698820FFB6280034BF43 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10698720FFB6280034BF43 /* ResultTableViewController.swift */; };
 		8D10698A20FFB64B0034BF43 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10698920FFB64B0034BF43 /* ResultTableViewCell.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		03434D5120FEA7B700F93FA9 /* LetterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LetterGenerator.swift; path = Controllers/LetterGenerator.swift; sourceTree = SOURCE_ROOT; };
+		03C10E0020FFE53A00B411C3 /* CalculateScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateScore.swift; sourceTree = "<group>"; };
 		6976E9A09FC47EEC1E0A9F5B /* Pods_VocabBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D10698720FFB6280034BF43 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		8D10698920FFB64B0034BF43 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = Controllers/ResultTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -80,6 +82,7 @@
 				BBA0A70E20FE5127006F5295 /* GameLogic.swift */,
 				03434D5120FEA7B700F93FA9 /* LetterGenerator.swift */,
 				BB5E6B8C20FEADEC00CD526E /* Timer.swift */,
+				03C10E0020FFE53A00B411C3 /* CalculateScore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				BB4C49A020FD1AF9004524A4 /* VocabBuilder.xcdatamodeld in Sources */,
 				8D10698820FFB6280034BF43 /* ResultTableViewController.swift in Sources */,
 				BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */,
+				03C10E0120FFE53A00B411C3 /* CalculateScore.swift in Sources */,
 				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
 				8D10698A20FFB64B0034BF43 /* ResultTableViewCell.swift in Sources */,

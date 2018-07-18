@@ -15,8 +15,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var randomLetter: String = LetterGenerator.generate()
     var wordsUsed: [String] = []
     var words: String = "Words Used: " // Delete this later
-    var gameInt = 110
+    var gameInt = 60
     var gameTimer = Timer()
+    var totalScore: Int = 0
+    @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var resultLabel: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
@@ -29,12 +31,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
         letterLabel.text = randomLetter
-        wordInputTextField.autocorrectionType = .no
         
         // Start timer for game screen
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.game), userInfo: nil, repeats: true)
@@ -42,23 +42,14 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         // Show keyboard when view loads
         wordInputTextField.becomeFirstResponder()
         
-
-        
-    }
-    
-    //Disables the space bar
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if (string == " ") {
-            return false
-        }
-        return true
     }
     
     // Function that with "Return" button when pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Get word from text field input
-        var wordGiven = wordInputTextField.text!.uppercased()
-//        print(wordsUsed)
+        let wordGiven = wordInputTextField.text!.uppercased()
+        
+        print(wordsUsed)
         
         handleWordInput(wordGiven: wordGiven)
         
@@ -75,56 +66,46 @@ class GameViewController: UIViewController, UITextFieldDelegate {
 // Game logic
 extension GameViewController {
     
-
-    
-    
-    
     func handleWordInput(wordGiven: String) {
         
-
-
-       // API.checkIfWordExists(word: wordGiven)
-//        print(API.wordExists)
-
+        
+        
+        // API.checkIfWordExists(word: wordGiven)
+        //        print(API.wordExists)
+        
         API.checkIfWordExists(word: wordGiven) { (exit) in
             
             DispatchQueue.main.async {
                 if API.wordExists == false{
+                    // reset view here
                     let wordDoesNotExist: String = "Word does not Exist!"
                     self.show(errorText: wordDoesNotExist)
                 }
+                    
+                    //word already used
+                else if self.wordsUsed.contains(wordGiven)  {
+                    let errorText: String = "Already used " + wordGiven
+                    self.show(errorText: errorText)
+                    
+                    //word does not contain the randomLetter
+                } else if wordGiven.hasPrefix(self.randomLetter) == false {
+                    let errorText: String = "Must begin with " + self.randomLetter
+                    self.show(errorText: errorText)
+                    
+                    //word sastifies the requirement
+                } else {
+                    
+                    // ADD CODE HERE. Make sure to add "self.function"
+                    
+                    self.calculateScore(wordGiven: wordGiven)
+                    self.wordsUsed.append(wordGiven)
+                    self.hideError()
+                    self.newRandomLetter()
+                }
+                self.resetTextField()
             }
         }
-
-        //word already used
-        if wordsUsed.contains(wordGiven)  {
-            let errorText: String = "Already used " + wordGiven
-            show(errorText: errorText)
-            
-        //word does not contain the randomLetter
-        } else if wordGiven.hasPrefix(randomLetter) == false {
-            let errorText: String = "Must begin with " + randomLetter
-            show(errorText: errorText)
-            
-        //word sastifies the requirement
-        } else {
-            
-            
-            
-            
-            // ADD SCORE CALCULATOR CODE HERE
-            // calculate and update total and total score label
-            
-            
-            
-            
-            
-            
-            wordsUsed.append(wordGiven)
-            hideError()
-            newRandomLetter()
-        }
-        resetTextField()
+        
     }
     
     func show(errorText: String) {
@@ -143,6 +124,12 @@ extension GameViewController {
     func newRandomLetter() {
         randomLetter = LetterGenerator.generate()
         letterLabel.text = randomLetter
+    }
+    
+    //update total score
+    func calculateScore(wordGiven: String ) {
+        totalScore +=  ScoreCalculator.pointCalculation(wordGiven: wordGiven)
+        scoreLabel.text = String(totalScore)
     }
     
     
