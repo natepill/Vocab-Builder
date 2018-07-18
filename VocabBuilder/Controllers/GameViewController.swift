@@ -84,7 +84,7 @@ extension GameViewController {
 
 
        // API.checkIfWordExists(word: wordGiven)
-        print(API.wordExists)
+//        print(API.wordExists)
 
         API.checkIfWordExists(word: wordGiven) { (exit) in
             
@@ -108,6 +108,18 @@ extension GameViewController {
             
         //word sastifies the requirement
         } else {
+            
+            
+            
+            
+            // ADD SCORE CALCULATOR CODE HERE
+            // calculate and update total and total score label
+            
+            
+            
+            
+            
+            
             wordsUsed.append(wordGiven)
             hideError()
             newRandomLetter()
