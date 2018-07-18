@@ -256,15 +256,7 @@
 				BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */,
 				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
-				8D45F8DA20FEB686002BE988 /* ResultTableViewCell.swift in Sources */,
-=======
->>>>>>> parent of 1eddfb7... Table View
-				03434D5220FEA7B700F93FA9 /* ArrayGenerator.swift in Sources */,
-=======
 				03434D5220FEA7B700F93FA9 /* LetterGenerator.swift in Sources */,
->>>>>>> 42d7fea96150448084bf0c99e88302d1821cd82d
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

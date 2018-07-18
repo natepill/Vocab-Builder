@@ -49,6 +49,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         print(wordsUsed)
         
         handleWordInput(wordGiven: wordGiven)
+        
         return false // Prevents keyboard from hiding
     }
 
@@ -58,42 +59,34 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
 }
 
-extension GameViewController{
-    @objc func game() {
-        // Decrementing the game timer by 1
-        gameInt -= 1
-        // After decrementing the timer update label to the current value
-        timeLabel.text = String(gameInt)
-        // Whenever the timer is equal to 0 stop the timer and go to the result screen
-        if gameInt == 0 {
-            // Stop the timer
-            gameTimer.invalidate()
-            // Go to the result view controller
-            segueToResultViewController()
-        }
-    }
-    
-    func segueToResultViewController(){
-        // Perform a segue to the next view controller
-        self.performSegue(withIdentifier: "resultScreenSegue", sender: self)
-    }
-}
 
+// Game logic
 extension GameViewController {
     
     func handleWordInput(wordGiven: String) {
+        
+        // NATHAN:
+        // Check that word exists
+        // if word does not exist {
+        //        let errorText: String = "Must begin with " + randomLetter
+        //        show(errorText: errorText)
+        //
+        // }
+        
+        
+        
         
         //word already used
         if wordsUsed.contains(wordGiven)  {
             let errorText: String = "Already used " + wordGiven
             show(errorText: errorText)
             
-            //word does not contain the randomLetter
+        //word does not contain the randomLetter
         } else if wordGiven.hasPrefix(randomLetter) == false {
             let errorText: String = "Must begin with " + randomLetter
             show(errorText: errorText)
             
-            //word sastifies the requirement
+        //word sastifies the requirement
         } else {
             wordsUsed.append(wordGiven)
             hideError()
@@ -122,6 +115,38 @@ extension GameViewController {
     
     
 }
+
+
+
+
+
+// Timer
+
+extension GameViewController{
+
+    @objc func game() {
+        // Decrementing the game timer by 1
+        gameInt -= 1
+        // After decrementing the timer update label to the current value
+        timeLabel.text = String(gameInt)
+        // Whenever the timer is equal to 0 stop the timer and go to the result screen
+        if gameInt == 0 {
+            // Stop the timer
+            gameTimer.invalidate()
+            // Go to the result view controller
+            segueToResultViewController()
+        }
+    }
+    
+    func segueToResultViewController(){
+        // Perform a segue to the next view controller
+        self.performSegue(withIdentifier: "resultScreenSegue", sender: self)
+    }
+}
+
+
+
+
 
 
 
