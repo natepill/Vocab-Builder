@@ -34,6 +34,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
         letterLabel.text = randomLetter
+        wordInputTextField.autocorrectionType = .no
         
         // Start timer for game screen
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.game), userInfo: nil, repeats: true)
