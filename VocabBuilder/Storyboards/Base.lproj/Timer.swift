@@ -1,5 +1,5 @@
 //
-//  GameLogic.swift
+//  Timer.swift
 //  VocabBuilder
 //
 //  Created by Memo on 7/17/18.
@@ -7,3 +7,5 @@
 //
 
 import UIKit
+
+
