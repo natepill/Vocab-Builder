@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03434D5220FEA7B700F93FA9 /* ArrayGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434D5120FEA7B700F93FA9 /* ArrayGenerator.swift */; };
+		03434D5220FEA7B700F93FA9 /* LetterGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03434D5120FEA7B700F93FA9 /* LetterGenerator.swift */; };
 		22CCA204B32B53526D40F0E7 /* Pods_VocabBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6976E9A09FC47EEC1E0A9F5B /* Pods_VocabBuilder.framework */; };
 		8D45F8D820FEAEA6002BE988 /* ResultTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45F8D720FEAEA6002BE988 /* ResultTableController.swift */; };
 		8D45F8DA20FEB686002BE988 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D45F8D920FEB686002BE988 /* ResultTableViewCell.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03434D5120FEA7B700F93FA9 /* ArrayGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrayGenerator.swift; path = Controllers/ArrayGenerator.swift; sourceTree = SOURCE_ROOT; };
+		03434D5120FEA7B700F93FA9 /* LetterGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LetterGenerator.swift; path = Controllers/LetterGenerator.swift; sourceTree = SOURCE_ROOT; };
 		6976E9A09FC47EEC1E0A9F5B /* Pods_VocabBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D45F8D720FEAEA6002BE988 /* ResultTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableController.swift; sourceTree = "<group>"; };
 		8D45F8D920FEB686002BE988 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -38,6 +38,7 @@
 		BB4C49A420FD1AFB004524A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB4C49A620FD1AFB004524A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB5E6B8820FEA85500CD526E /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		BB5E6B8D20FEADEC00CD526E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Storyboards/Base.lproj/Timer.swift; sourceTree = SOURCE_ROOT; };
 		BBA0A70E20FE5127006F5295 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameLogic.swift; path = Controllers/GameLogic.swift; sourceTree = SOURCE_ROOT; };
 		BBA0A71120FE6561006F5295 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E6C59007741A4FC2C535954C /* Pods-VocabBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				BBA0A70E20FE5127006F5295 /* GameLogic.swift */,
-				03434D5120FEA7B700F93FA9 /* ArrayGenerator.swift */,
+				03434D5120FEA7B700F93FA9 /* LetterGenerator.swift */,
+				BB5E6B8C20FEADEC00CD526E /* Timer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -261,8 +263,12 @@
 				BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */,
 				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
+<<<<<<< HEAD
 				8D45F8DA20FEB686002BE988 /* ResultTableViewCell.swift in Sources */,
 				03434D5220FEA7B700F93FA9 /* ArrayGenerator.swift in Sources */,
+=======
+				03434D5220FEA7B700F93FA9 /* LetterGenerator.swift in Sources */,
+>>>>>>> 42d7fea96150448084bf0c99e88302d1821cd82d
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +289,14 @@
 				BB4C49A420FD1AFB004524A4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BB5E6B8C20FEADEC00CD526E /* Timer.swift */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB5E6B8D20FEADEC00CD526E /* Base */,
+			);
+			name = Timer.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
