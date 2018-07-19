@@ -127,8 +127,5 @@
         <namedColor name="tcCharcoal">
             <color red="0.28999999170000001" green="0.28999999170000001" blue="0.28999999170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="tcCharcoal">
-            <color red="0.28999999170000001" green="0.28999999170000001" blue="0.28999999170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>
