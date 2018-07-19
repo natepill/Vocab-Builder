@@ -14,6 +14,9 @@
 		39D356002100FEF10027CBA8 /* ViewScores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D355FF2100FEF10027CBA8 /* ViewScores.storyboard */; };
 		8D10698820FFB6280034BF43 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10698720FFB6280034BF43 /* ResultTableViewController.swift */; };
 		8D10698A20FFB64B0034BF43 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D10698920FFB64B0034BF43 /* ResultTableViewCell.swift */; };
+		8D1069AC2101111B0034BF43 /* ViewScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1069AB2101111B0034BF43 /* ViewScoresTableViewController.swift */; };
+		8D1069AE2101113D0034BF43 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1069AD2101113C0034BF43 /* HowToPlayViewController.swift */; };
+		8D1069B02101144B0034BF43 /* ViewScoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1069AF2101144B0034BF43 /* ViewScoresTableViewCell.swift */; };
 		BB2875C620FD5015003A8042 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2875C520FD5015003A8042 /* GameViewController.swift */; };
 		BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C499720FD1AF9004524A4 /* AppDelegate.swift */; };
 		BB4C499A20FD1AF9004524A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C499920FD1AF9004524A4 /* ViewController.swift */; };
@@ -34,6 +37,9 @@
 		6976E9A09FC47EEC1E0A9F5B /* Pods_VocabBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VocabBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D10698720FFB6280034BF43 /* ResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		8D10698920FFB64B0034BF43 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = Views/ResultTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		8D1069AB2101111B0034BF43 /* ViewScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScoresTableViewController.swift; sourceTree = "<group>"; };
+		8D1069AD2101113C0034BF43 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		8D1069AF2101144B0034BF43 /* ViewScoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewScoresTableViewCell.swift; sourceTree = "<group>"; };
 		BB2875C520FD5015003A8042 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BB4C499420FD1AF9004524A4 /* VocabBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB4C499720FD1AF9004524A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				8D10698920FFB64B0034BF43 /* ResultTableViewCell.swift */,
+				8D1069AF2101144B0034BF43 /* ViewScoresTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +112,8 @@
 				BB4C499920FD1AF9004524A4 /* ViewController.swift */,
 				BB2875C520FD5015003A8042 /* GameViewController.swift */,
 				8D10698720FFB6280034BF43 /* ResultTableViewController.swift */,
+				8D1069AB2101111B0034BF43 /* ViewScoresTableViewController.swift */,
+				8D1069AD2101113C0034BF43 /* HowToPlayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,13 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D1069B02101144B0034BF43 /* ViewScoresTableViewCell.swift in Sources */,
 				BB2875C620FD5015003A8042 /* GameViewController.swift in Sources */,
 				BB4C499A20FD1AF9004524A4 /* ViewController.swift in Sources */,
+				8D1069AE2101113D0034BF43 /* HowToPlayViewController.swift in Sources */,
 				BB4C49A020FD1AF9004524A4 /* VocabBuilder.xcdatamodeld in Sources */,
 				8D10698820FFB6280034BF43 /* ResultTableViewController.swift in Sources */,
 				BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */,
 				03C10E0120FFE53A00B411C3 /* CalculateScore.swift in Sources */,
 				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
+				8D1069AC2101111B0034BF43 /* ViewScoresTableViewController.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
 				8D10698A20FFB64B0034BF43 /* ResultTableViewCell.swift in Sources */,
 				03434D5220FEA7B700F93FA9 /* LetterGenerator.swift in Sources */,
