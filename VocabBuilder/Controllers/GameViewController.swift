@@ -45,6 +45,14 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    // Prepare what to send to the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultViewController = segue.destination as? ResultTableViewController {
+            resultViewController.score = totalScore
+            resultViewController.wordsUsed = wordsUsed
+        }
+    }
+    
     //Disables the space bar
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if (string == " ") {
@@ -143,10 +151,6 @@ extension GameViewController {
     
     
 }
-
-
-
-
 
 // Timer
 

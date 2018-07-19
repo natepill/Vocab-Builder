@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/macbookpro/Desktop/classes/GitiOSProjects/Vocab-Builder/VocabBuilder/Storyboards/Game.storyboard">
+   </FileRef>
+   <FileRef
       location = "group:VocabBuilder.xcodeproj">
    </FileRef>
    <FileRef
