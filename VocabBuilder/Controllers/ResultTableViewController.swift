@@ -10,6 +10,9 @@ import UIKit
 
 class ResultTableViewController: UIViewController {
     
+    var score: Int = 0
+    var wordsUsed: [String] = []
+    
     @IBOutlet weak var tableView: UITableView!
     
 }
@@ -17,14 +20,14 @@ class ResultTableViewController: UIViewController {
 
 extension ResultTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return wordsUsed.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as! ResultTableViewCell
-        cell.wordTitleLabel.text = "Word Title"
-        cell.typeTitleLabel.text = "Type Title"
-        cell.descriptionTitleLabel.text = "Description Title"
+        cell.wordTitleLabel.text = wordsUsed[indexPath.row]
+        cell.typeTitleLabel.text = "Type"
+        cell.descriptionTitleLabel.text = "This is word description!"
         return cell
     }
 }
