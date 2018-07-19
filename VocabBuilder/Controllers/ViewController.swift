@@ -19,8 +19,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationItem.setHidesBackButton(true, animated:true)
+//        self.navigationController?.isNavigationBarHidden = true
         // API.checkIfWordExists(word: "deez nuutaz")
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // To hide Navigation bar
+        //self.navigationItem.setHidesBackButton(true, animated:true)
+        //self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {

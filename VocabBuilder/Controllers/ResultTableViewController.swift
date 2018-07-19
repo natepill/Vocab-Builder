@@ -21,7 +21,8 @@ class ResultTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        self.navigationController?.isNavigationBarHidden = true
         scoreLabel.text = String(score)
         
     
@@ -30,6 +31,13 @@ class ResultTableViewController: UIViewController {
         }
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // To hide Navigation bar
+//        self.navigationItem.setHidesBackButton(true, animated:true)
+//        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.popViewController(animated: true)
     }
     
 }

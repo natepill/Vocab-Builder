@@ -33,7 +33,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:true)
         self.navigationController?.isNavigationBarHidden = true
-        //self.navigationController?.popViewController(animated: true)
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
         letterLabel.text = randomLetter
@@ -45,6 +44,13 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         // Show keyboard when view loads
         wordInputTextField.becomeFirstResponder()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // To hide Navigation bar
+        //self.navigationItem.setHidesBackButton(true, animated:true)
+        //self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.popViewController(animated: true)
     }
     
     // Prepare what to send to the segue
