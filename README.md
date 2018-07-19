@@ -76,6 +76,34 @@ Users will open the app and will start the game by getting a random letter and u
 
 **Friday:**
 
+
+User Testing Session #1
+------------------------------------
+### Bugs
+Disable emojis
+Repeated letters (if else w/ ArcRandom)
+Single and two letter words are accepted as dictionary words
+Make letter a little bigger
+Symbols and miscellaneous (make keyboard only letters)
+Repeated tapping of restart button
+Change “Reset” button to “Home” button
+Take away 3…2…1 on the home screen button and put the count down in the gamViewController
+
+### Features
+Add example in textField (if letter given is A, then textfield should read “Apple”)
+Add hot streak
+Add prefixes in addition to words in the random array
+Option to go back from gameViewController
+Put instructions in the beginning
+Create a “Play Again” button
+Enter name with high score
+Explain that complex words grant higher points on home screen
+Animation with added words
+
+
+
+
+
 # Files collaborators working on 
 
 ## Tushar: Result View Controller/Storyboard
