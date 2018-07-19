@@ -31,7 +31,9 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.popViewController(animated: true)
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
         letterLabel.text = randomLetter
