@@ -22,6 +22,8 @@
 		BB4C49A220FD1AFB004524A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB4C49A120FD1AFB004524A4 /* Assets.xcassets */; };
 		BB4C49A520FD1AFB004524A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB4C49A320FD1AFB004524A4 /* LaunchScreen.storyboard */; };
 		BB5E6B8920FEA85500CD526E /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5E6B8820FEA85500CD526E /* Result.storyboard */; };
+		BB71F95B210139BB0092E2F7 /* Thesaurus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71F95A210139BB0092E2F7 /* Thesaurus.swift */; };
+		BB71F95E21013A240092E2F7 /* Synonyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71F95D21013A240092E2F7 /* Synonyms.swift */; };
 		BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A70E20FE5127006F5295 /* GameLogic.swift */; };
 		BBA0A71220FE6561006F5295 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A71120FE6561006F5295 /* APIService.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		BB4C49A620FD1AFB004524A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB5E6B8820FEA85500CD526E /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		BB5E6B8D20FEADEC00CD526E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Storyboards/Base.lproj/Timer.swift; sourceTree = SOURCE_ROOT; };
+		BB71F95A210139BB0092E2F7 /* Thesaurus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thesaurus.swift; sourceTree = "<group>"; };
+		BB71F95D21013A240092E2F7 /* Synonyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synonyms.swift; sourceTree = "<group>"; };
 		BBA0A70E20FE5127006F5295 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameLogic.swift; path = Controllers/GameLogic.swift; sourceTree = SOURCE_ROOT; };
 		BBA0A71120FE6561006F5295 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E6C59007741A4FC2C535954C /* Pods-VocabBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				03434D5120FEA7B700F93FA9 /* LetterGenerator.swift */,
 				BB5E6B8C20FEADEC00CD526E /* Timer.swift */,
 				03C10E0020FFE53A00B411C3 /* CalculateScore.swift */,
+				BB71F95A210139BB0092E2F7 /* Thesaurus.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 		BB4C498B20FD1AF9004524A4 = {
 			isa = PBXGroup;
 			children = (
+				BB71F95C21013A130092E2F7 /* Models */,
 				BBA0A71020FE653E006F5295 /* Services */,
 				8D9CEC2120FD1E3C00BD4D86 /* Controllers */,
 				8D9CEC2020FD1E1700BD4D86 /* Supporting */,
@@ -155,6 +161,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		BB71F95C21013A130092E2F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB71F95D21013A240092E2F7 /* Synonyms.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BBA0A71020FE653E006F5295 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +196,7 @@
 				BB4C499020FD1AF9004524A4 /* Sources */,
 				BB4C499120FD1AF9004524A4 /* Frameworks */,
 				BB4C499220FD1AF9004524A4 /* Resources */,
+				E2B8F723B3654BBBB29E0B70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,6 +275,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E2B8F723B3654BBBB29E0B70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -268,11 +307,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2875C620FD5015003A8042 /* GameViewController.swift in Sources */,
+				BB71F95E21013A240092E2F7 /* Synonyms.swift in Sources */,
 				BB4C499A20FD1AF9004524A4 /* ViewController.swift in Sources */,
 				BB4C49A020FD1AF9004524A4 /* VocabBuilder.xcdatamodeld in Sources */,
 				8D10698820FFB6280034BF43 /* ResultTableViewController.swift in Sources */,
 				BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */,
 				03C10E0120FFE53A00B411C3 /* CalculateScore.swift in Sources */,
+				BB71F95B210139BB0092E2F7 /* Thesaurus.swift in Sources */,
 				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
 				8D10698A20FFB64B0034BF43 /* ResultTableViewCell.swift in Sources */,
