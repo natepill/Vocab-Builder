@@ -110,6 +110,6 @@ Animation with added words
 
 ## Nathan: View Controller and API Service
 
-## Memo: Game View Controller
+## Memo: ThesaurusHelper File, ResultViewController
 
 ## Owais: Score Calculator 
