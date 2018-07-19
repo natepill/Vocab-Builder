@@ -9,5 +9,9 @@ import Foundation
 import UIKit
 class ViewScoresTableViewCell: UITableViewCell{
     
+    @IBOutlet weak var nameTitle: UILabel!
     
+    @IBOutlet weak var scoreTitle: UILabel!
+    
+    @IBOutlet weak var dateTitle: UILabel!
 }

@@ -22,12 +22,12 @@ extension ViewScoresTableViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as! ResultTableViewCell
-        cell.wordTitleLabel.text = wordsUsed[indexPath.row]
-        cell.typeTitleLabel.text = "Type"
-        cell.descriptionTitleLabel.text = "This is word description!"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ViewScoresTableViewCell", for: indexPath) as! ViewScoresTableViewCell
+        cell.nameTitle.text = "Name"
+        cell.scoreTitle.text = "Score:"
+        cell.dateTitle.text = "Date"
+        
         return cell
     }
-    
 }
 
