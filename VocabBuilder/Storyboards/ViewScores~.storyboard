@@ -55,7 +55,7 @@
                                 <color key="backgroundColor" red="0.76222482290000004" green="0.77922914509999996" blue="0.78086544690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="View Scores"/>
                                 <connections>
-                                    <segue destination="azj-w8-t0v" kind="show" id="oVr-R2-MwO"/>
+                                    <segue destination="JrM-H4-MTU" kind="show" id="oVr-R2-MwO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -179,6 +179,21 @@
             </objects>
             <point key="canvasLocation" x="-1114" y="483"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="qv4-RG-UIY">
+            <objects>
+                <viewController id="JrM-H4-MTU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="87s-He-V8H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y3U-bm-fIW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7x-YP-o5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="-150"/>
+        </scene>
         <!--Result-->
         <scene sceneID="EMy-Rb-OKE">
             <objects>
@@ -194,14 +209,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGQ-4l-TWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="353" y="-754"/>
-        </scene>
-        <!--ViewScores-->
-        <scene sceneID="9og-6l-cIY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ViewScores" id="azj-w8-t0v" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hNr-CV-RNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="356" y="-150"/>
         </scene>
     </scenes>
 </document>

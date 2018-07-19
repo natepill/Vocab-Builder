@@ -46,7 +46,7 @@
                                 <color key="backgroundColor" red="0.76222482290000004" green="0.77922914509999996" blue="0.78086544690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="How to play"/>
                                 <connections>
-                                    <segue destination="qF8-vW-t5q" kind="show" id="puA-yp-6Yk"/>
+                                    <segue destination="Zw8-8O-U7g" kind="show" id="puA-yp-6Yk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="385-3C-1lj">
@@ -55,7 +55,7 @@
                                 <color key="backgroundColor" red="0.76222482290000004" green="0.77922914509999996" blue="0.78086544690000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="View Scores"/>
                                 <connections>
-                                    <segue destination="azj-w8-t0v" kind="show" id="oVr-R2-MwO"/>
+                                    <segue destination="OAX-Gc-enP" kind="show" id="OPw-le-GqF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -179,6 +179,36 @@
             </objects>
             <point key="canvasLocation" x="-1114" y="483"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zcK-Ey-JDk">
+            <objects>
+                <viewController id="Zw8-8O-U7g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oE8-iT-Cy2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cg0-Dq-uEN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AiB-Tk-uKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="-754"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="inQ-4f-tLi">
+            <objects>
+                <viewController id="OAX-Gc-enP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gxA-IO-4wx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1aX-sP-6Wm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DjQ-Lj-Nu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="-83"/>
+        </scene>
         <!--Result-->
         <scene sceneID="EMy-Rb-OKE">
             <objects>
@@ -186,22 +216,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZ1-8F-Ihc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-361" y="195"/>
-        </scene>
-        <!--HowToPlay-->
-        <scene sceneID="3Ac-gK-sma">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HowToPlay" id="qF8-vW-t5q" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LGQ-4l-TWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="353" y="-754"/>
-        </scene>
-        <!--ViewScores-->
-        <scene sceneID="9og-6l-cIY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ViewScores" id="azj-w8-t0v" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hNr-CV-RNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="356" y="-150"/>
         </scene>
     </scenes>
 </document>
