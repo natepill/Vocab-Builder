@@ -31,7 +31,9 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.popViewController(animated: true)
         self.wordInputTextField.delegate = self
         errorLabel.isHidden = true
         letterLabel.text = randomLetter
@@ -58,7 +60,17 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         if (string == " ") {
             return false
         }
+        
+        let characterSet = CharacterSet.letters
+        
+        if string.rangeOfCharacter(from: characterSet.inverted) != nil {
+            return false
+        }
         return true
+        
+        
+        
+        
     }
     
     // Function that with "Return" button when pressed
@@ -72,6 +84,14 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         return false // Prevents keyboard from hiding
     }
+    
+    
+    //Only have Alphabet allowed the textField
+
+    
+    
+    
+    
 
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         segueToResultViewController()
