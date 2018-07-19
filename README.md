@@ -82,6 +82,6 @@ Users will open the app and will start the game by getting a random letter and u
 
 ## Nathan: View Controller and API Service
 
-## Memo: Game View Controller
+## Memo: ThesaurusHelper File, ResultViewController
 
 ## Owais: Score Calculator 
