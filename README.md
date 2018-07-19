@@ -55,11 +55,15 @@ Users will open the app and will start the game by getting a random letter and u
 * Calculate the score based on speed and 
 
 **Wednesday:**
+* Playable build
+* Main functionality of the game works
 
 **Thursday:**
+* Add other main featurers: Leaderboard, giving synonyms
+* Polish
 
 **Friday:**
-
+* Polish features and UI
 
 ### **Achieved Tasks:** 
 
@@ -71,6 +75,12 @@ Users will open the app and will start the game by getting a random letter and u
 *  
 
 **Wednesday:**
+* Main funcionality of the game is working
+* User testing with other students
+* Created method that calculates the score and implemented it in the UI
+* Obtain the words used by the user and display in the ResultsView
+
+
 
 **Thursday:**
 
