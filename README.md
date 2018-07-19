@@ -65,7 +65,7 @@ Users will open the app and will start the game by getting a random letter and u
 **Friday:**
 * Polish features and UI
 
-### **Achieved Tasks:** 
+# Achieved Tasks
 
 **Tuesday:**
 * Dictionary of Arrays for letters.
