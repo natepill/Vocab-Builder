@@ -14,6 +14,23 @@ class ResultTableViewController: UIViewController {
     var wordsUsed: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var nameInputTextField: UITextField!
+    @IBOutlet weak var resetButton: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        scoreLabel.text = String(score)
+        
+    
+        func synonyms(for word: String) {
+                print()
+        }
+        
+        
+    }
     
 }
 
@@ -26,8 +43,7 @@ extension ResultTableViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as! ResultTableViewCell
         cell.wordTitleLabel.text = wordsUsed[indexPath.row]
-        cell.typeTitleLabel.text = "Type"
-        cell.descriptionTitleLabel.text = "This is word description!"
+        cell.descriptionTitleLabel.text = "[Synonyms]"
         return cell
     }
 }
