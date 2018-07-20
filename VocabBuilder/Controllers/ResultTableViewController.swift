@@ -15,8 +15,6 @@ class ResultTableViewController: UIViewController {
     var synonyms: [String: String] = [:]
     let defaults = UserDefaults.standard
 
-
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nameInputTextField: UITextField!
@@ -50,24 +48,35 @@ class ResultTableViewController: UIViewController {
         submitScoreButton.backgroundColor = UIColor.lightGray
         submitScoreButton.setTitle("Submitted!", for: .normal)
         submitToLeaderBoard()
+        
+        
     }
     
 
+    // Submit to temporary local leaderboard function
     
-    func submitToLeaderBoard(){
-        
+    func submitToLeaderBoard() {
         let userName = nameInputTextField.text ?? ""
-        let userScore = String(score)
-
-        defaults.set([userName, userScore], forKey: "user")
-        defaults.synchronize()
+        let userScore = score
         
-        if let users = defaults.string(forKey: "user") {
-            print(users)
-        }
-        
-        
+        LocalScores.scores[userName] = userScore
     }
+    
+    
+//    func submitToLeaderBoard(){
+//
+//        let userName = nameInputTextField.text ?? ""
+//        let userScore = String(score)
+//
+//        defaults.set([userName, userScore], forKey: "user")
+//        defaults.synchronize()
+//
+//        if let users = defaults.string(forKey: "user") {
+//            print(users)
+//        }
+//
+//
+//    }
     
 
     
