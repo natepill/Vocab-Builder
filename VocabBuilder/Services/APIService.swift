@@ -47,12 +47,12 @@ struct API {
             if  let data = data,
                 let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
                 
-                print(response)
-                print("JSON DATA", jsonData)
-                print("Word \(word) exists!")
+//                print(response)
+//                print("JSON DATA", jsonData)
+//                print("Word \(word) exists!")
             } else {
                 //wordExists = false
-                print("Word \(word) does not exist!")
+//                print("Word \(word) does not exist!")
                 guard let data = data else{return}
                 print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
             }
