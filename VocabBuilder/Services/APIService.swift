@@ -29,26 +29,24 @@ struct API {
         _ = session.dataTask(with: request, completionHandler: { data, response, error in
             
             guard let response = response as? HTTPURLResponse else {return}
-            print(response.statusCode)
+//            print(response.statusCode)
             switch response.statusCode {
             case 200 ... 299:
                 wordExists = true
-                print("wordExist: \(wordExists)")
             default:
                 wordExists = false
-                print("wordExist: \(wordExists)")
             }
             
             completion(wordExists)
             
             if  let data = data,
                 let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
-                print(jsonData)
+//                print(jsonData)
                 // Do something with the data
             } else {
 
                 guard let data = data else{return}
-                print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
+//                print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
             }
             
         }).resume()

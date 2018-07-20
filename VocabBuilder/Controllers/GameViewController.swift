@@ -15,7 +15,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var randomLetter: String = LetterGenerator.generate()
     var wordsUsed: [String] = []
     var words: String = "Words Used: " // Delete this later
-    var gameInt = 60
+    var gameInt = 45
     var gameTimer = Timer()
     var totalScore: Int = 0
     @IBOutlet weak var scoreLabel: UILabel!
@@ -73,7 +73,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         // Get word from text field input
         let wordGiven = wordInputTextField.text!.uppercased()
         
-        print(wordsUsed)
+//        print(wordsUsed)
         
         handleWordInput(wordGiven: wordGiven)
         
@@ -92,12 +92,12 @@ class GameViewController: UIViewController, UITextFieldDelegate {
 extension GameViewController {
     
     func handleWordInput(wordGiven: String) {
-        
+    
         API.checkIfWordExists(word: wordGiven) { (exit) in
             
             DispatchQueue.main.async {
                 
-                    // word is one letter
+                // word is one letter
                 if wordGiven.count == 1 {
                     let errorText: String = "No single letters!"
                     self.show(errorText: errorText)
@@ -129,8 +129,9 @@ extension GameViewController {
                 self.resetTextField()
             }
         }
-        
+
     }
+    
     
     func show(errorText: String) {
         errorLabel.text = errorText
@@ -156,10 +157,9 @@ extension GameViewController {
         scoreLabel.text = String(totalScore)
     }
     
-    
 }
 
-// Timer
+// Timer function and finishing functions before segue
 
 extension GameViewController{
 
@@ -181,11 +181,55 @@ extension GameViewController{
         // Perform a segue to the next view controller
         self.performSegue(withIdentifier: "resultScreenSegue", sender: self)
     }
+    
 }
 
 
 
 
+
+// **** Old checker using API ***
+
+
+
+
+
+
+
+// *** Offline checker ***
+
+// word is one letter
+//if wordGiven.count == 1 {
+//    let errorText: String = "No single letters!"
+//    show(errorText: errorText)
+//
+//    // input is empty
+//} else if wordGiven == "" {
+//    let errorText: String = ""
+//    show(errorText: errorText)
+//    // word already used
+//} else if self.wordsUsed.contains(wordGiven)  {
+//    let errorText: String = "Already used " + wordGiven
+//    show(errorText: errorText)
+//
+//    // word does not contain the randomLetter
+//} else if wordGiven.hasPrefix(self.randomLetter) == false {
+//    let errorText: String = "Must begin with " + self.randomLetter
+//    show(errorText: errorText)
+//
+//    // word exists
+//} else if Checker.doesNotExist(wordGiven: wordGiven) {
+//    let wordDoesNotExist: String = "\(wordGiven) is not a word"
+//    show(errorText: wordDoesNotExist)
+//
+//    //word sastifies the requirement
+//} else {
+//    calculateScore(wordGiven: wordGiven)
+//    wordsUsed.append(wordGiven)
+//    hideError()
+//    newRandomLetter()
+//}
+//resetTextField()
 
 
 
