@@ -14,6 +14,7 @@ class ResultTableViewController: UIViewController {
     var wordsUsed: [String] = []
     var synonyms: [String: String] = [:]
     var userInfo: [String: Int] = [:]
+  //  var multipleUsers = [Any]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -49,6 +50,9 @@ class ResultTableViewController: UIViewController {
         submitScoreButton.setTitle("Submitted!", for: .normal)
         submitToLeaderBoard()
         
+
+        
+        
     }
     
 
@@ -59,7 +63,19 @@ class ResultTableViewController: UIViewController {
         let userScore = score
 
         userInfo[userName!] = userScore
+        addToDefaults(dict: userInfo)
         
+        
+    }
+    
+    func addToDefaults(dict: Dictionary< String, Int>){
+ 
+        UserDefaults.standard.set(userInfo, forKey: "userInfo")
+        
+        guard let result = UserDefaults.standard.value(forKey: "userInfo") else {return}
+
+//        multipleUsers.append(result)
+        print(result)
     }
     
     
