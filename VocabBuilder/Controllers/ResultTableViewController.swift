@@ -13,6 +13,7 @@ class ResultTableViewController: UIViewController {
     var score: Int = 0
     var wordsUsed: [String] = []
     var synonyms: [String: String] = [:]
+    var userInfo: [String: Int] = [:]
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -46,16 +47,22 @@ class ResultTableViewController: UIViewController {
     @IBAction func submitScoreButtonTapped(_ sender: UIButton) {
         submitScoreButton.backgroundColor = UIColor.lightGray
         submitScoreButton.setTitle("Submitted!", for: .normal)
+        submitToLeaderBoard()
+        
+    }
+    
+
+    
+    func submitToLeaderBoard(){
+        
+        let userName = nameInputTextField.text
+        let userScore = score
+
+        userInfo[userName!] = userScore
         
     }
     
     
-    // Function to add user score!!
-//        func submitScoreToLeaderboard() {
-//            let user = User(userName: nameInputTextField, score: score)
-//            // submit to coreData or userDefaults
-//
-//        }
     
     
     
