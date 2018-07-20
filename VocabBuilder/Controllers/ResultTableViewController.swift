@@ -18,6 +18,7 @@ class ResultTableViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nameInputTextField: UITextField!
     @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var submitScoreButton: UIButton!
     
 
     override func viewDidLoad() {
@@ -27,8 +28,29 @@ class ResultTableViewController: UIViewController {
         scoreLabel.text = String(score)
         getSynonyms()
         
+        
     }
+    
+    
+    @IBAction func submitScoreButtonTapped(_ sender: UIButton) {
+        submitScoreButton.backgroundColor = UIColor.lightGray
+        submitScoreButton.setTitle("Submitted!", for: .normal)
+        
+        
+    }
+    
+    
+    // Function to add user score!!
+//        func submitScoreToLeaderboard() {
+//            let user = User(userName: nameInputTextField, score: score)
+//            // submit to coreData or userDefaults
+//
+//        }
+    
+    
+    
 }
+
 
 
 extension ResultTableViewController: UITableViewDelegate, UITableViewDataSource {

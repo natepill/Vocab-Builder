@@ -83,6 +83,9 @@
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Submit Score"/>
+                                                <connections>
+                                                    <action selector="submitScoreButtonTapped:" destination="jqU-3W-Ga1" eventType="touchUpInside" id="uvI-3y-TSd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -212,6 +215,7 @@
                         <outlet property="nameInputTextField" destination="Khy-tw-XYB" id="aYK-5P-4dM"/>
                         <outlet property="resetButton" destination="Er6-id-d8t" id="hN3-4s-Xdy"/>
                         <outlet property="scoreLabel" destination="cTX-oq-XSz" id="2Yq-LD-CJK"/>
+                        <outlet property="submitScoreButton" destination="Ifn-gd-0bh" id="Hz3-v1-Ue3"/>
                         <outlet property="tableView" destination="eGD-UX-z0S" id="GTb-l6-sLe"/>
                     </connections>
                 </viewController>
