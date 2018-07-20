@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+
+
 class ResultTableViewCell: UITableViewCell{
     
     @IBOutlet weak var wordTitleLabel: UILabel!

@@ -7,11 +7,14 @@
 //
 import Foundation
 import UIKit
-class ViewScoresTableViewCell: UITableViewCell{
+
+
+class ScoresTableCell: UITableViewCell{
     
-    @IBOutlet weak var nameTitle: UILabel!
+    @IBOutlet weak var standingLabel: UILabel!
+    @IBOutlet weak var userScoreLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
     
-    @IBOutlet weak var scoreTitle: UILabel!
     
-    @IBOutlet weak var dateTitle: UILabel!
+    
 }

@@ -9,10 +9,24 @@
 import Foundation
 import UIKit
 
-class ViewScoresTableViewController: UIViewController{
+class ViewScoresTableViewController: UIViewController {
     
+    var users: [String] = []
     
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+//    func getUsers() {
+//        for user in LocalScores.scores {
+//            users.append()
+//        }
+//    }
+    
+    
     
 }
 
@@ -22,12 +36,15 @@ extension ViewScoresTableViewController: UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ViewScoresTableViewCell", for: indexPath) as! ViewScoresTableViewCell
-        cell.nameTitle.text = "Name"
-        cell.scoreTitle.text = "Score:"
-        cell.dateTitle.text = "Date"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ScoresTableCell", for: indexPath) as! ScoresTableCell
+        
+        cell.standingLabel.text = String(indexPath.row)
+        cell.userScoreLabel.text = ""
+        cell.usernameLabel.text = ""
         
         return cell
     }
+
+
 }
 
