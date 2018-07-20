@@ -9,17 +9,26 @@
 import Foundation
 import SwiftyJSON
 
-struct Checker {
+struct WordChecker {
     
-    static func doesNotExist(wordGiven: String) -> Bool {
-        guard let jsonURL = Bundle.main.url(forResource: "dictionary", withExtension: "json")
-            else { return false }
+    var wordsDict: [String: Any] = {
+        guard
+            let jsonURL = Bundle.main.url(forResource: "dictionary", withExtension: "json"),
+            let jsonData = try? Data(contentsOf: jsonURL),
+            let wordsJSON = try? JSON(data: jsonData),
+            let wordsDict = wordsJSON.dictionaryObject else {
+                assertionFailure("failed to decode json")
+                
+                return [:]
+        }
         
-        let jsonData = try! Data(contentsOf: jsonURL)
-        let wordsJSON = try! JSON(data: jsonData)
+        return wordsDict
         
+    }()
+    
+    func doesNotExist(wordGiven: String) -> Bool {
         // Check if word exists
-        if wordsJSON[wordGiven] == 1 {
+        if wordsDict[wordGiven] != nil {
             return true
         } else {
             return false

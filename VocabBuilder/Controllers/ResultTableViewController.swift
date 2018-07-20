@@ -20,7 +20,18 @@ class ResultTableViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var submitScoreButton: UIButton!
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +46,6 @@ class ResultTableViewController: UIViewController {
     @IBAction func submitScoreButtonTapped(_ sender: UIButton) {
         submitScoreButton.backgroundColor = UIColor.lightGray
         submitScoreButton.setTitle("Submitted!", for: .normal)
-        
         
     }
     

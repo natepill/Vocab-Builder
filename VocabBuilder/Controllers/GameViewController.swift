@@ -18,6 +18,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var gameInt = 45
     var gameTimer = Timer()
     var totalScore: Int = 0
+    var wordChecker: WordChecker = WordChecker()
     @IBOutlet weak var scoreLabel: UILabel!
     
     @IBOutlet weak var resultLabel: UIButton!
@@ -28,6 +29,19 @@ class GameViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var testLabel: UILabel! // To delete label
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,43 +106,78 @@ class GameViewController: UIViewController, UITextFieldDelegate {
 extension GameViewController {
     
     func handleWordInput(wordGiven: String) {
-    
-        API.checkIfWordExists(word: wordGiven) { (exit) in
+        
+            // word is one letter
+        if wordGiven.count == 1 {
+            let errorText: String = "No single letters!"
+            show(errorText: errorText)
             
-            DispatchQueue.main.async {
-                
-                // word is one letter
-                if wordGiven.count == 1 {
-                    let errorText: String = "No single letters!"
-                    self.show(errorText: errorText)
-                } else if wordGiven == "" {
-                    let errorText: String = ""
-                    self.show(errorText: errorText)
-                    // word already used
-                } else if self.wordsUsed.contains(wordGiven)  {
-                    let errorText: String = "Already used " + wordGiven
-                    self.show(errorText: errorText)
-                    
-                    // word does not contain the randomLetter
-                } else if wordGiven.hasPrefix(self.randomLetter) == false {
-                    let errorText: String = "Must begin with " + self.randomLetter
-                    self.show(errorText: errorText)
-                    
-                    // word exists
-                } else if API.wordExists == false{
-                    let wordDoesNotExist: String = "\(wordGiven) is not a word"
-                    self.show(errorText: wordDoesNotExist)
-                    
-                    //word sastifies the requirement
-                } else {
-                    self.calculateScore(wordGiven: wordGiven)
-                    self.wordsUsed.append(wordGiven)
-                    self.hideError()
-                    self.newRandomLetter()
-                }
-                self.resetTextField()
-            }
+            // input is empty
+        } else if wordGiven == "" {
+            let errorText: String = ""
+            show(errorText: errorText)
+            
+            // word already used
+        } else if self.wordsUsed.contains(wordGiven)  {
+            let errorText: String = "Already used " + wordGiven
+            show(errorText: errorText)
+            
+            // word does not contain the randomLetter
+        } else if wordGiven.hasPrefix(self.randomLetter) == false {
+            let errorText: String = "Must begin with " + self.randomLetter
+            show(errorText: errorText)
+            
+            // word exists
+        } else if wordChecker.doesNotExist(wordGiven: wordGiven) {
+            let wordDoesNotExist: String = "\(wordGiven) is not a word"
+            show(errorText: wordDoesNotExist)
+            
+            //word sastifies the requirement
+        } else {
+            calculateScore(wordGiven: wordGiven)
+            wordsUsed.append(wordGiven)
+            hideError()
+            newRandomLetter()
         }
+        resetTextField()
+        
+    
+//        API.checkIfWordExists(word: wordGiven) { (exit) in
+//
+//            DispatchQueue.main.async {
+//
+//                // word is one letter
+//                if wordGiven.count == 1 {
+//                    let errorText: String = "No single letters!"
+//                    self.show(errorText: errorText)
+//                } else if wordGiven == "" {
+//                    let errorText: String = ""
+//                    self.show(errorText: errorText)
+//                    // word already used
+//                } else if self.wordsUsed.contains(wordGiven)  {
+//                    let errorText: String = "Already used " + wordGiven
+//                    self.show(errorText: errorText)
+//
+//                    // word does not contain the randomLetter
+//                } else if wordGiven.hasPrefix(self.randomLetter) == false {
+//                    let errorText: String = "Must begin with " + self.randomLetter
+//                    self.show(errorText: errorText)
+//
+//                    // word exists
+//                } else if API.wordExists == false {
+//                    let wordDoesNotExist: String = "\(wordGiven) is not a word"
+//                    self.show(errorText: wordDoesNotExist)
+//
+//                    //word sastifies the requirement
+//                } else {
+//                    self.calculateScore(wordGiven: wordGiven)
+//                    self.wordsUsed.append(wordGiven)
+//                    self.hideError()
+//                    self.newRandomLetter()
+//                }
+//                self.resetTextField()
+//            }
+//        }
 
     }
     
@@ -198,38 +247,6 @@ extension GameViewController{
 
 // *** Offline checker ***
 
-// word is one letter
-//if wordGiven.count == 1 {
-//    let errorText: String = "No single letters!"
-//    show(errorText: errorText)
-//
-//    // input is empty
-//} else if wordGiven == "" {
-//    let errorText: String = ""
-//    show(errorText: errorText)
-//    // word already used
-//} else if self.wordsUsed.contains(wordGiven)  {
-//    let errorText: String = "Already used " + wordGiven
-//    show(errorText: errorText)
-//
-//    // word does not contain the randomLetter
-//} else if wordGiven.hasPrefix(self.randomLetter) == false {
-//    let errorText: String = "Must begin with " + self.randomLetter
-//    show(errorText: errorText)
-//
-//    // word exists
-//} else if Checker.doesNotExist(wordGiven: wordGiven) {
-//    let wordDoesNotExist: String = "\(wordGiven) is not a word"
-//    show(errorText: wordDoesNotExist)
-//
-//    //word sastifies the requirement
-//} else {
-//    calculateScore(wordGiven: wordGiven)
-//    wordsUsed.append(wordGiven)
-//    hideError()
-//    newRandomLetter()
-//}
-//resetTextField()
 
 
 
