@@ -23,6 +23,7 @@ class ResultTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.reloadData()
         scoreLabel.text = String(score)
         getSynonyms()
         

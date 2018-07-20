@@ -31,6 +31,9 @@ struct Thesaurus {
         let session = URLSession.shared
         _ = session.dataTask(with: request, completionHandler: { data, response, error in
             if let data = data,
+                
+                
+                // Parse jason data and create synonym array
                 let jsonData = try? JSON(data: data) {
                 
                 var synonyms: [String] = []

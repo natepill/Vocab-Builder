@@ -60,17 +60,12 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         if (string == " ") {
             return false
         }
-        
         let characterSet = CharacterSet.letters
-        
         if string.rangeOfCharacter(from: characterSet.inverted) != nil {
             return false
         }
         return true
-        
-        
-        
-        
+
     }
     
     // Function that with "Return" button when pressed
@@ -105,34 +100,34 @@ extension GameViewController {
     
     func handleWordInput(wordGiven: String) {
         
-        
-        
-        // API.checkIfWordExists(word: wordGiven)
-        //        print(API.wordExists)
-        
         API.checkIfWordExists(word: wordGiven) { (exit) in
             
             DispatchQueue.main.async {
-                if API.wordExists == false{
-                    // reset view here
-                    let wordDoesNotExist: String = "\(wordGiven) does not Exist!"
-                    self.show(errorText: wordDoesNotExist)
+                
+                    // word is one letter
+                if wordGiven.count == 1 {
+                    let errorText: String = "No single letters!"
+                    self.show(errorText: errorText)
                 }
                     
-                    //word already used
+                    // word already used
                 else if self.wordsUsed.contains(wordGiven)  {
                     let errorText: String = "Already used " + wordGiven
                     self.show(errorText: errorText)
                     
-                    //word does not contain the randomLetter
+                    // word does not contain the randomLetter
                 } else if wordGiven.hasPrefix(self.randomLetter) == false {
                     let errorText: String = "Must begin with " + self.randomLetter
                     self.show(errorText: errorText)
                     
+                    // word exists
+                } else if API.wordExists == false{
+                    // reset view here
+                    let wordDoesNotExist: String = "\(wordGiven) is not a word"
+                    self.show(errorText: wordDoesNotExist)
+                    
                     //word sastifies the requirement
                 } else {
-                    
-                    // ADD CODE HERE. Make sure to add "self.function"
                     
                     self.calculateScore(wordGiven: wordGiven)
                     self.wordsUsed.append(wordGiven)
