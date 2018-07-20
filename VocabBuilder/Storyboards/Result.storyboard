@@ -80,7 +80,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifn-gd-0bh">
                                                 <rect key="frame" x="171.66666666666663" y="0.0" width="155.33333333333337" height="40"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.30588235289999999" green="0.67450980390000004" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Submit Score"/>
                                                 <connections>
@@ -101,7 +101,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.18035768263254767" green="0.42937779447616686" blue="0.62255407402436558" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9vn-Ue-DNI" secondAttribute="trailing" constant="24" id="4cq-Wd-DbE"/>
                                     <constraint firstItem="wQR-b6-qzl" firstAttribute="leading" secondItem="fiL-vn-got" secondAttribute="leading" constant="24" id="6O5-tM-RfW"/>
@@ -198,7 +198,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.38084286103393827" green="0.38084286103393827" blue="0.38084286103393827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18035768260000001" green="0.42937779450000002" blue="0.62255407399999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eGD-UX-z0S" firstAttribute="bottom" secondItem="NxZ-Ll-6id" secondAttribute="bottom" id="NRn-F3-cWV"/>
                             <constraint firstItem="eGD-UX-z0S" firstAttribute="top" secondItem="fiL-vn-got" secondAttribute="bottom" id="Stn-KS-s45"/>

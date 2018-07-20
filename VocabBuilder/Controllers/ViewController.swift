@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 //        startButton.setTitle(String(startInt), for: .normal)
 //        // Equating the startTimer variable to Create a timer and schedules it on the current run loop in the default
 //        startTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.startGameTimer), userInfo: nil, repeats: true)
-        
+//        self.
         self.performSegue(withIdentifier:"startGameSegue", sender: self)
     }
     
