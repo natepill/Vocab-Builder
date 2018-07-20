@@ -25,8 +25,6 @@ struct API {
         request.addValue(appId, forHTTPHeaderField: "app_id")
         request.addValue(appKey, forHTTPHeaderField: "app_key")
         
-        
-        
         let session = URLSession.shared
         _ = session.dataTask(with: request, completionHandler: { data, response, error in
             
@@ -43,16 +41,12 @@ struct API {
             
             completion(wordExists)
             
-            
             if  let data = data,
                 let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
-                
-//                print(response)
-//                print("JSON DATA", jsonData)
-//                print("Word \(word) exists!")
+                print(jsonData)
+                // Do something with the data
             } else {
-                //wordExists = false
-//                print("Word \(word) does not exist!")
+
                 guard let data = data else{return}
                 print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
             }

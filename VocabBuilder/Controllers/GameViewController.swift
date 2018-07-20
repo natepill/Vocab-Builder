@@ -80,13 +80,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         return false // Prevents keyboard from hiding
     }
     
-    
-    //Only have Alphabet allowed the textField
-
-    
-    
-    
-    
 
     @IBAction func resultButtonTapped(_ sender: UIButton) {
         segueToResultViewController()
@@ -108,10 +101,11 @@ extension GameViewController {
                 if wordGiven.count == 1 {
                     let errorText: String = "No single letters!"
                     self.show(errorText: errorText)
-                }
-                    
+                } else if wordGiven == "" {
+                    let errorText: String = ""
+                    self.show(errorText: errorText)
                     // word already used
-                else if self.wordsUsed.contains(wordGiven)  {
+                } else if self.wordsUsed.contains(wordGiven)  {
                     let errorText: String = "Already used " + wordGiven
                     self.show(errorText: errorText)
                     
@@ -122,13 +116,11 @@ extension GameViewController {
                     
                     // word exists
                 } else if API.wordExists == false{
-                    // reset view here
                     let wordDoesNotExist: String = "\(wordGiven) is not a word"
                     self.show(errorText: wordDoesNotExist)
                     
                     //word sastifies the requirement
                 } else {
-                    
                     self.calculateScore(wordGiven: wordGiven)
                     self.wordsUsed.append(wordGiven)
                     self.hideError()
