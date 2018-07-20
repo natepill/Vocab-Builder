@@ -29,6 +29,8 @@
 		BB71F95E21013A240092E2F7 /* Synonyms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB71F95D21013A240092E2F7 /* Synonyms.swift */; };
 		BBA0A70F20FE5127006F5295 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A70E20FE5127006F5295 /* GameLogic.swift */; };
 		BBA0A71220FE6561006F5295 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA0A71120FE6561006F5295 /* APIService.swift */; };
+		BBA7A8A4210253D0009A10E8 /* dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = BBA7A8A3210253D0009A10E8 /* dictionary.json */; };
+		BBA7A8A621025441009A10E8 /* WordExists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7A8A521025441009A10E8 /* WordExists.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		BB71F95D21013A240092E2F7 /* Synonyms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synonyms.swift; sourceTree = "<group>"; };
 		BBA0A70E20FE5127006F5295 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameLogic.swift; path = Controllers/GameLogic.swift; sourceTree = SOURCE_ROOT; };
 		BBA0A71120FE6561006F5295 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		BBA7A8A3210253D0009A10E8 /* dictionary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dictionary.json; sourceTree = "<group>"; };
+		BBA7A8A521025441009A10E8 /* WordExists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordExists.swift; sourceTree = "<group>"; };
 		E6C59007741A4FC2C535954C /* Pods-VocabBuilder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabBuilder.release.xcconfig"; path = "Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder.release.xcconfig"; sourceTree = "<group>"; };
 		FEA88CEE0E60580D19DB0595 /* Pods-VocabBuilder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VocabBuilder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VocabBuilder/Pods-VocabBuilder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +103,7 @@
 				BB5E6B8C20FEADEC00CD526E /* Timer.swift */,
 				03C10E0020FFE53A00B411C3 /* CalculateScore.swift */,
 				BB71F95A210139BB0092E2F7 /* Thesaurus.swift */,
+				BBA7A8A521025441009A10E8 /* WordExists.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 		BB4C498B20FD1AF9004524A4 = {
 			isa = PBXGroup;
 			children = (
+				BBA7A8A2210253C1009A10E8 /* Dictionary */,
 				BB71F95C21013A130092E2F7 /* Models */,
 				BBA0A71020FE653E006F5295 /* Services */,
 				8D9CEC2120FD1E3C00BD4D86 /* Controllers */,
@@ -184,6 +190,14 @@
 				BBA0A71120FE6561006F5295 /* APIService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BBA7A8A2210253C1009A10E8 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				BBA7A8A3210253D0009A10E8 /* dictionary.json */,
+			);
+			path = Dictionary;
 			sourceTree = "<group>";
 		};
 		EA9E16F915E6FAE7FA099DA1 /* Frameworks */ = {
@@ -258,6 +272,7 @@
 				BB4C49A520FD1AFB004524A4 /* LaunchScreen.storyboard in Resources */,
 				39D355FE2100FEA10027CBA8 /* HowToPlay.storyboard in Resources */,
 				BB4C49A220FD1AFB004524A4 /* Assets.xcassets in Resources */,
+				BBA7A8A4210253D0009A10E8 /* dictionary.json in Resources */,
 				BB4C499D20FD1AF9004524A4 /* Main.storyboard in Resources */,
 				BB5E6B8920FEA85500CD526E /* Result.storyboard in Resources */,
 			);
@@ -326,6 +341,7 @@
 				03C10E0120FFE53A00B411C3 /* CalculateScore.swift in Sources */,
 				BB71F95B210139BB0092E2F7 /* Thesaurus.swift in Sources */,
 				BBA0A71220FE6561006F5295 /* APIService.swift in Sources */,
+				BBA7A8A621025441009A10E8 /* WordExists.swift in Sources */,
 				8D1069AC2101111B0034BF43 /* ViewScoresTableViewController.swift in Sources */,
 				BB4C499820FD1AF9004524A4 /* AppDelegate.swift in Sources */,
 				8D10698A20FFB64B0034BF43 /* ResultTableViewCell.swift in Sources */,
