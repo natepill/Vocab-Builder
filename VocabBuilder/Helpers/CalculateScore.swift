@@ -11,7 +11,7 @@ import Foundation
 struct ScoreCalculator {
     
     static func pointCalculation(wordGiven: String) -> Int {
-        let points: Int = wordGiven.count * 2
+        let points: Int = wordGiven.count * 7
         return points
     }
     
