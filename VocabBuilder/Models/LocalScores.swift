@@ -10,6 +10,6 @@ import Foundation
 
 struct LocalScores {
     
-    static var scores: [String: Int] = [:]
+    static var scores: [String: String] = [:]
     
 }

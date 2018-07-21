@@ -11,40 +11,51 @@ import UIKit
 
 class ViewScoresTableViewController: UIViewController {
     
+    
     var users: [String] = []
     
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var scoresTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getUsers()
+        
     }
     
-    
-//    func getUsers() {
-//        for user in LocalScores.scores {
-//            users.append()
-//        }
-//    }
+    func getUsers() {
+//        let sortedScores = LocalScores.scores.sort(by: >)
+        for user in LocalScores.scores.keys {
+            users.append(user)
+        }
+        
+    }
     
     
     
 }
 
 extension ViewScoresTableViewController: UITableViewDataSource, UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ScoresTableCell", for: indexPath) as! ScoresTableCell
         
-        cell.standingLabel.text = String(indexPath.row)
-        cell.userScoreLabel.text = ""
-        cell.usernameLabel.text = ""
+        cell.standingLabel.text = String(indexPath.row + 1)
+        cell.usernameLabel.text = users[indexPath.row]
+        cell.userScoreLabel.text = LocalScores.scores[users[indexPath.row]]
         
         return cell
     }
 
 
 }
+
+
+
+
+
 

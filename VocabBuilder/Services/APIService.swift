@@ -14,8 +14,8 @@ struct API {
     
     static func checkIfWordExists(word: String, completion: @escaping(Bool) -> Void) {
         
-        let appId = "f3d865c4"
-        let appKey = "3eda87c3cade9b19556d0c3eec35f77a"
+        let appId = "acf39243"
+        let appKey = "632c289f671d8fad6dd40f09efaf4fd5"
         
         let language = "en"
         // Fix this issue
@@ -41,12 +41,12 @@ struct API {
             
             if  let data = data,
                 let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
-//                print(jsonData)
+                print(jsonData)
                 // Do something with the data
             } else {
 
                 guard let data = data else{return}
-//                print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
+                print(NSString.init(data: data, encoding: String.Encoding.utf8.rawValue)!)
             }
             
         }).resume()
