@@ -122,4 +122,4 @@ Animation with added words
 
 ## Memo: ThesaurusHelper File, ResultViewController
 
-## Owais: Score Calculator 
+## Owais: Score Calculator, LetterGenerator, Wordexists
