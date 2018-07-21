@@ -57,7 +57,7 @@ class ResultTableViewController: UIViewController {
     
     func submitToLeaderBoard() {
         let userName = nameInputTextField.text ?? ""
-        let userScore = score
+        let userScore = String(score)
         
         LocalScores.scores[userName] = userScore
     }

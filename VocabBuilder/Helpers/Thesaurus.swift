@@ -15,8 +15,8 @@ struct Thesaurus {
     
     static func getSynonymsFor(word: String, completion: @escaping ([String]) -> Void) {
         
-        let appId = "f3d865c4"
-        let appKey = "3eda87c3cade9b19556d0c3eec35f77a"
+        let appId = "acf39243"
+        let appKey = "632c289f671d8fad6dd40f09efaf4fd5"
         
         // words must be lowercased
         let language = "en"

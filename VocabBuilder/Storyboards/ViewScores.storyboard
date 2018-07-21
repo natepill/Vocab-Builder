@@ -100,6 +100,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JrM-H4-MTU" id="hEt-Eb-HeF"/>
+                                    <outlet property="delegate" destination="JrM-H4-MTU" id="xsh-YP-maB"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,9 +119,12 @@
                         <viewLayoutGuide key="safeArea" id="y3U-bm-fIW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vBI-Wa-otE"/>
+                    <connections>
+                        <outlet property="scoresTableView" destination="gJ4-Gz-2RF" id="Yel-eD-QHB"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="356" y="-150.67466266866569"/>
+            <point key="canvasLocation" x="767" y="-134"/>
         </scene>
     </scenes>
 </document>
