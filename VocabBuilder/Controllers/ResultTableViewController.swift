@@ -39,16 +39,17 @@ class ResultTableViewController: UIViewController {
         tableView.reloadData()
         scoreLabel.text = String(score)
         getSynonyms()
-        
-        
+    
     }
     
     
     @IBAction func submitScoreButtonTapped(_ sender: UIButton) {
-        submitScoreButton.backgroundColor = UIColor.lightGray
-        submitScoreButton.setTitle("Submitted!", for: .normal)
-        submitToLeaderBoard()
-        
+        if nameInputTextField.text != "" {
+            submitScoreButton.backgroundColor = UIColor.lightGray
+            submitScoreButton.setTitle("Submitted!", for: .normal)
+            submitScoreButton.isEnabled = false
+            submitToLeaderBoard()
+        }
     }
     
 
