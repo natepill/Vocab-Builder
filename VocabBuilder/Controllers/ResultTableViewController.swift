@@ -49,7 +49,6 @@ class ResultTableViewController: UIViewController {
         submitScoreButton.setTitle("Submitted!", for: .normal)
         submitToLeaderBoard()
         
-        
     }
     
 
@@ -57,32 +56,10 @@ class ResultTableViewController: UIViewController {
     
     func submitToLeaderBoard() {
         let userName = nameInputTextField.text ?? ""
-        let userScore = String(score)
+        let userScore = score
         
-        LocalScores.scores[userName] = userScore
+        UD.scores[userName] = userScore
     }
-    
-    
-//    func submitToLeaderBoard(){
-//
-//        let userName = nameInputTextField.text ?? ""
-//        let userScore = String(score)
-//
-//        defaults.set([userName, userScore], forKey: "user")
-//        defaults.synchronize()
-//
-//        if let users = defaults.string(forKey: "user") {
-//            print(users)
-//        }
-//
-//
-//    }
-    
-
-    
-    
-    
-    
     
 }
 
@@ -111,30 +88,29 @@ extension ResultTableViewController: UITableViewDelegate, UITableViewDataSource 
 extension ResultTableViewController {
     
     func getSynonyms() {
-        //        print("Testing synonyms")
-        
+
         for word in wordsUsed {
-            var synonymText: String = ""
-            Thesaurus.getSynonymsFor(word: word.lowercased()) { (synonymsArray) in
-                DispatchQueue.main.sync {
-                    for synonym in synonymsArray {
-                        if synonym == synonymsArray[synonymsArray.count - 1] {
-                            synonymText += synonym
-                        } else {
-                            synonymText += synonym +  ", "
-                        }
-                    }
-                    if synonymText != "" {
-                        self.synonyms[word] = synonymText
-                    } else {
-                        let wordToRemove = self.wordsUsed.index(of: word)!
-                        self.wordsUsed.remove(at: wordToRemove)
-                    }
-                    
-                    self.tableView.reloadData()
+            var synonymText = ""
+
+            let synonymsArray = Thesaurus.getSynonyms(word: word)
+            
+            for synonym in synonymsArray {
+                if synonym == synonymsArray[synonymsArray.count - 1] {
+                    synonymText += synonym
+                } else {
+                    synonymText += synonym  +  ", "
                 }
             }
+            if synonymText == "" {
+                let wordToRemove = wordsUsed.index(of: word)!
+                wordsUsed.remove(at: wordToRemove)
+            } else {
+                synonyms[word] = synonymText
+            }
+            
+            tableView.reloadData()
         }
+        
     }
     
     

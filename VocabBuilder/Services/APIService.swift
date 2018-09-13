@@ -5,6 +5,7 @@
 //  Created by Memo on 7/17/18.
 //  Copyright © 2018 Memo. All rights reserved.
 //
+// *** This file is no longer used, but kept as a reference.
 
 import Foundation
 

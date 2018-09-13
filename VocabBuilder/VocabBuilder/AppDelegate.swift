@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        loadDictionary()
+        loadThesaurus()
         return true
     }
 
@@ -87,6 +90,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func launchedBefore() {
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        if !launchedBefore  {
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            loadDictionary()
+            }
+        }
+    
+    func loadDictionary() {
+        guard let jsonURL = Bundle.main.url(forResource: "dictionary", withExtension: "json") else {
+            print("Could not find dictionary.json!")
+            return
+        }
+        
+        let dictionaryData = try! Data(contentsOf: jsonURL)
+        let dictionaryJSON = try? JSONSerialization.jsonObject(with: dictionaryData, options: [])
+
+        if let dictionary = dictionaryJSON as? [String: Any] {
+            UD.dictionary = dictionary
+            print("Dictionary saved to userDefaults!")
+        }
+        
+    }
+    
+    func loadThesaurus() {
+        guard let jsonURL = Bundle.main.url(forResource: "thesaurus", withExtension: "json") else {
+            print("Could not find thesaurus.json!")
+            return
+        }
+        
+        let thesaurusData = try! Data(contentsOf: jsonURL)
+        let thesaurusJSOn = try? JSONSerialization.jsonObject(with: thesaurusData, options: [])
+        
+        if let thesaurus = thesaurusJSOn as? [String: Any] {
+            UD.thesaurus = thesaurus
+            print("Thesaurus saved to userDefaults!")
+        }
+        
     }
 
 }
